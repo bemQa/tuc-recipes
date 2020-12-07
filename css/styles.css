@@ -1,0 +1,1414 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+main {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    border-style: none;
+}
+
+img[width="0"][height="0"] {
+    display: none;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+input,
+select,
+textarea,
+button {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+::-ms-clear {
+    display: none;
+}
+
+input {
+    overflow: visible;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+label {
+    margin: 0;
+}
+
+input,
+button,
+select {
+    border: none;
+    outline: none;
+}
+
+input {
+    border-radius: 0;
+}
+
+body .mobile-visible {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    body .mobile-visible {
+        display: block;
+    }
+
+    body .desktop-visible {
+        display: none;
+    }
+}
+
+.no-scrolling {
+	overflow: hidden;
+}
+
+.link {
+	text-decoration: underline;
+}
+
+.link:hover {
+	text-decoration: none;
+}
+
+.invert-link {
+	text-decoration: none;
+}
+
+.invert-link:hover {
+	text-decoration: underline;
+}
+
+/*SCROLL ---------------------- */
+body .scroll-element,
+body .scroll-element div {
+    border: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+body .scroll-element div {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+body .scroll-element.scroll-x {
+    bottom: 1px;
+    height: 8px;
+    left: 0;
+    width: 100%;
+}
+
+.collection-list.scroll-wrapper>.scroll-content {
+    padding-bottom: 10px;
+}
+
+body .collection-list .scroll-element.scroll-y {
+    display: none;
+}
+
+body .scroll-element.scroll-x .scroll-element_track {
+    top: 0;
+    width: 100%;
+    height: 8px;
+}
+
+body .scroll-element.scroll-y {
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 6px;
+}
+
+body .scroll-element .scroll-element_outer {
+    overflow: visible;
+}
+
+body .scroll-element .scroll-element_outer,
+body .scroll-element .scroll-element_track,
+body .scroll-element .scroll-bar {
+    border-radius: 0;
+}
+
+body .scroll-element .scroll-element_track {
+    background: #004F91;
+    left: 0;
+    width: 2px;
+}
+
+body .scroll-element .scroll-bar {
+    height: auto;
+    min-height: 10px;
+    max-height: 100px;
+    width: 8px;
+    background: #004F91;
+    box-shadow: none;
+    left: -3px;
+    position: relative;
+}
+
+body .scroll-element:hover .scroll-bar {
+    
+}
+
+body .scroll-element.scroll-draggable .scroll-bar {
+    
+}
+
+body .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track {
+    left: -12px;
+}
+
+body .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track {
+    top: -12px;
+}
+
+body .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size {
+    left: -12px;
+}
+
+body .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
+    top: -12px;
+}
+
+/**/
+
+/* Slider */
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/**/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: #1A4384;
+    font: normal 16px/19px 'PF Din Text Cond Pro', sans-serif;
+    background: #FFD100;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1030px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    position: relative;
+    max-width: 1180px;
+    width: 100%;
+    margin: auto;
+    z-index: 3;
+}
+
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 73px;
+    z-index: 1;
+}
+
+.menu-links {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s linear;
+}
+
+.menu-links.fixed {
+    position: fixed;
+    top: 0;
+    background: #FDE908;
+    height: 78px;
+    box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.menu-links a {
+    position: relative;
+    font-family: 'Peach Milk 2.0';
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 1px;
+    color: #2D4795;
+    margin: 0 16px;
+    padding-bottom: 5px;
+    transition: all .3s linear;
+}
+
+.menu-links a:hover {
+    color: #27C2EE;
+}
+
+.menu-links a.active {
+    border-bottom: 2px solid #27C2EE;
+}
+
+.main-block {
+    position: relative;
+    min-height: 660px;
+    background: url(../img/main-composition.png) center 0 no-repeat;
+    background-size: 1321px;
+}
+
+.main-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 133%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.main-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/rhomb.png) center no-repeat;
+    background-size: 656px;
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 234px;
+    height: 51px;
+    margin: auto;
+    background: none;
+}
+
+.btn span {
+    font-family: 'Peach Milk 2.0';
+    font-size: 31px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+	.btn span,
+	.menu-btn span {
+		padding-top: 2px;
+	}
+}
+
+.btn svg,
+.menu-btn svg  {
+    position: absolute;
+    z-index: 0;
+}
+
+.btn svg,
+.btn svg path,
+.menu-btn svg,
+.menu-btn svg path {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.btn:hover svg path,
+.menu-btn:hover svg path {
+    fill: #278EEE;
+}
+
+.btn.disabled,
+.menu-btn.disabled {
+    opacity: .6;
+    pointer-events: none;
+}
+
+.btn.disabled svg path,
+.menu-btn.disabled svg path {
+    fill: #278EEE;
+}
+
+.prizes-block {
+    min-height: 697px;
+    margin-top: 130px;
+}
+
+.title {
+    font-family: 'Peach Milk 2.0';
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+}
+
+.recipes-title {
+    color: #fff;
+}
+
+.recipes-block {
+    position: relative;
+    min-height: 700px;
+    padding: 50px 0 100px;
+    background: url(../img/blue1-bg.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+.recipes-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.recipes-slider {
+    margin-top: 40px;
+}
+
+.recipe-slide-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 320px;
+    width: 100%;
+    min-height: 446px;
+    padding: 30px 25px 30px 28px;
+}
+
+.recipe-slide-content.bg1 {
+    background: url(../img/recipe-bg1.png) center no-repeat;
+    background-size: cover;
+}
+
+.recipe-slide-content.bg2 {
+    background: url(../img/recipe-bg2.png) center no-repeat;
+    background-size: cover;
+}
+
+.recipe-slide-content.bg3 {
+    background: url(../img/recipe-bg3.png) center no-repeat;
+    background-size: cover;
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    height: 51px;
+    margin: auto;
+    font-size: 0;
+    transition: all .2s linear;
+    z-index: 1;
+}
+
+.slick-arrow:active {
+    transform: scale(.9);
+}
+
+.slick-prev {
+    left: -45px;
+    background: url(../img/arrow-left.svg) center no-repeat;
+    background-size: contain;
+}
+
+.recipes-slider .slick-prev {
+    background: url(../img/arrow-left-white.svg) center no-repeat;
+    background-size: contain;
+}
+
+.slick-next {
+    right: -45px;
+    background: url(../img/arrow-right.svg) center no-repeat;
+    background-size: contain;
+}
+
+.recipes-slider .slick-next {
+    background: url(../img/arrow-right-white.svg) center no-repeat;
+    background-size: contain;
+}
+
+.recipe-slide-name {
+    position: relative;
+    font-family: 'Peach Milk 2.0';
+    font-size: 46px;
+    line-height: 93%;
+    letter-spacing: 0.03em;
+    z-index: 1;
+}
+
+.recipe-slide-name img {
+    position: absolute;
+    top: -35px;
+    left: 35px;
+    transform: scale(.7);
+}
+
+.recipe-slide-img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 170px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
+}
+
+.products-block {
+    position: relative;
+    min-height: 456px;
+    margin: 35px 0 30px;
+    background: url(../img/tuc-bg.png) center no-repeat;
+    background-size: 731px;
+}
+
+.products-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 133%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.product-img {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 275px;
+}
+
+.product-img img {
+    filter: drop-shadow(-6px 8px 16px rgba(0, 0, 0, 0.15));
+}
+
+.product-title {
+    font-family: 'Peach Milk 2.0';
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.product-weight {
+    font-family: 'Peach Milk 2.0';
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+
+.buy-block {
+    display: flex;
+    align-items: center;
+    min-height: 112px;
+    background: url(../img/white1-bg.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+.buy-wrapper {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-title {
+    font-family: 'Peach Milk 2.0';
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-right: 15px;
+}
+
+.buy-logo {
+    margin: 0 15px;
+}
+
+.actions-block {
+    position: relative;
+    margin: 50px 0 35px;
+}
+
+.actions-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 133%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.actions-slider {
+    margin-top: 30px;
+}
+
+.action-slide {
+    position: relative;
+}
+
+.action-img {
+    padding-bottom: 95px;
+}
+
+.action-img .mobile-visible {
+    display: none;
+}
+
+.action-bottom {
+    position: absolute;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 118px;
+    background: url(../img/action-bottom.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    min-height: 120px;
+    text-align: center;
+    background: url(../img/footer-bg.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: left;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+
+.footer-socials {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-socials a {
+    margin: 0 20px;
+}
+
+.recipe-block {
+    position: relative;
+}
+
+.recipe-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.recipe-block .container {
+    max-width: 1070px;
+}
+
+.recipe-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+
+.recipe-info {
+    position: relative;
+    max-width: 330px;
+    width: 100%;
+}
+
+.recipe-name {
+    position: relative;
+    font-family: 'Peach Milk 2.0';
+    font-size: 64px;
+    line-height: 93%;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.recipe-name img {
+    position: absolute;
+    top: -30px;
+    left: 75px;
+}
+
+.recipe-text {
+    position: relative;
+    max-width: 225px;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 2;
+}
+
+.recipe-img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 90px;
+    right: -100px;
+    z-index: 1;
+}
+
+.recipe3 .recipe-img {
+    top: 200px;
+}
+
+.recipe-how {
+    position: relative;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0 80px;
+}
+
+.recipe-how::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    width: 693px;
+    height: 451px;
+    margin: auto;
+    background: url(../img/blue-recipe-bg.png) center no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.recipe-how::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    width: 693px;
+    height: 451px;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.recipe-how * {
+    position: relative;
+}
+
+.recipes-composition-wrapper {
+    position: relative;
+    min-height: 650px;
+}
+
+.recipe-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 132px;
+    width: 100%;
+}
+
+.recipes-composition {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipes-composition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/rhomb.png) center no-repeat;
+    background-size: 737px;
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+@media (max-width: 1366px) {
+    .recipes-block,
+    .buy-block,
+    footer {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1280px) {
+    .container {
+        max-width: 970px;
+    }
+
+    .logo {
+        left: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container,
+    .recipe-block .container {
+        max-width: 375px;
+    }
+
+    .logo {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .menu-links .logo {
+        position: absolute;
+        max-width: 60px !important;
+        left: 0;
+        right: 0;
+    }
+
+    .burger {
+        position: fixed;
+        top: 20px;
+        left: 15px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 50px;
+        background: url(../img/burger.svg) center no-repeat;
+        background-size: 31px;
+        font-family: 'Peach Milk 2.0';
+        font-size: 28px;
+        line-height: 77.5%;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: #003087;
+        z-index: 11;
+    }
+
+    .burger.active {
+        background: url(../img/close.svg) 0 0 no-repeat;
+        background-size: 14px;
+        color: #fff;
+    }
+
+    .menu-links {
+        position: fixed;
+        background: url(../img/menu-bg.png) center no-repeat;
+        background-size: 100% 100%;
+        max-width: 354px;
+        width: 100%;
+        top: 0;
+        margin: auto;
+        padding: 85px 10px 32px;
+        flex-direction: column;
+        z-index: 0;
+        transition: all .3s ease;
+        transform: scale(0.5);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .menu-links.active {
+        top: 0;
+        z-index: 10;
+        transform: scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-links a:not(.soc) {
+        width: 100%;
+        max-width: 277px;
+        font-size: 55px;
+        line-height: 1;
+        text-align: left;
+        letter-spacing: 0.02em;
+        color: #fff;
+        margin: 10px auto;
+        transform: rotate(-2.35deg);
+    }
+
+    .menu-links a:first-child {
+        margin-top: 0;
+    }
+
+    .menu-links a:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu-links a:hover,
+    .menu-links a.active {
+        color: #FFD100;
+    }
+
+    .menu-links .footer-socials {
+        display: flex;
+        order: 1;
+    }
+
+    .menu-links .footer-socials a {
+        transform: none;
+    }
+
+    .main-block {
+        min-height: 600px;
+        background: url(../img/main-composition-mob.png) center -25px no-repeat;
+        background-size: 502px;
+    }
+
+    .main-block::after {
+        background-size: 460px;
+    }
+
+    .products-block {
+        background-size: 430px;
+    }
+
+    .buy-block {
+        min-height: 222px;
+        background: url(../img/white1-bg-mob.png) center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .buy-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .buy-title {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .buy-logo {
+        margin: 10px 15px;
+    }
+
+    .actions-slider {
+        max-width: 310px;
+        width: 100%;
+        margin: 30px auto 0;
+    }
+
+    .action-img .desktop-visible {
+        display: none !important;
+    }
+
+    .action-img .mobile-visible {
+        display: block;
+    }
+
+    footer {
+        min-height: 235px;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .copyright {
+        order: 1;
+        font-size: 10px;
+        line-height: 11px;
+        text-align: center;
+    }
+
+    .mndlz-logo {
+        margin-bottom: 25px;
+    }
+
+    .footer-socials {
+        order: -1;
+        margin-bottom: 25px;
+    }
+    
+    .recipe-content {
+        position: relative;
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    .recipe-content::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        right: -100px;
+        bottom: 0;
+        width: 460px;
+        height: 440px;
+        margin: auto;
+        background: url(../img/rhomb.png) center no-repeat;
+        background-size: 460px;
+        mix-blend-mode: multiply;
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    .recipe-info {
+        margin: 0 auto 20px;
+    }
+
+    .recipe-name {
+        font-size: 46px;
+    }
+
+    .recipe-name img {
+        top: -35px;
+        left: 35px;
+        transform: scale(.7);
+    }
+
+    .recipe-img {
+        top: 50px;
+        transform: scale(.7);
+    }
+
+    .recipe3 .recipe-img {
+        top: 100px;
+    }
+
+    .recipe-how {
+        padding: 40px 0 45px;
+    }
+
+    .recipe-how::before {
+        width: 375px;
+        height: 265px;
+        margin: auto;
+        background: url(../img/blue-recipe-bg-mob.png) center no-repeat;
+        background-size: cover; 
+    }
+
+    .recipe-how::after {
+        width: 375px;
+        height: 265px;
+    }
+
+    .recipe-how img {
+        width: 290px;
+    }
+
+    .recipes-composition-wrapper {
+        min-height: 350px;
+    }
+
+    .recipes-composition {
+        position: relative;
+    }
+
+    .recipes-composition::before {
+        display: none;
+    }
+
+    .recipes-composition img {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        right: -100px;
+        width: 380px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 370px) {
+    
+}
