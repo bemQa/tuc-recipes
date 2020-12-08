@@ -461,13 +461,13 @@ body {
     margin: 0;
     color: #1A4384;
     font: normal 16px/19px 'PF Din Text Cond Pro', sans-serif;
-    background: #FFD100;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    background: #FFD100;
 }
 
 .content {
@@ -544,8 +544,15 @@ header {
 .main-block {
     position: relative;
     min-height: 660px;
+}
+
+.main-composition {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: url(../img/main-composition.png) center 0 no-repeat;
     background-size: 1321px;
+    z-index: 1;
 }
 
 .main-block::before {
@@ -562,7 +569,7 @@ header {
     background-size: cover;
     mix-blend-mode: soft-light;
     opacity: 0.4;
-    z-index: -1;
+    z-index: 0;
 }
 
 .main-block::after {
@@ -579,7 +586,7 @@ header {
     background-size: 656px;
     mix-blend-mode: multiply;
     opacity: 0.3;
-    z-index: -1;
+    z-index: 0;
 }
 
 .btn {
@@ -662,6 +669,7 @@ header {
     padding: 50px 0 100px;
     background: url(../img/blue1-bg.png) center no-repeat;
     background-size: 100% 100%;
+    overflow: hidden;
 }
 
 .recipes-block::before {
@@ -779,9 +787,10 @@ header {
 .products-block {
     position: relative;
     min-height: 456px;
-    margin: 35px 0 30px;
+    padding: 35px 0 60px;
     background: url(../img/tuc-bg.png) center no-repeat;
     background-size: 731px;
+    overflow: hidden;
 }
 
 .products-block::before {
@@ -798,7 +807,7 @@ header {
     background-size: cover;
     mix-blend-mode: soft-light;
     opacity: 0.4;
-    z-index: -1;
+    z-index: 0;
 }
 
 .product-img {
@@ -835,6 +844,7 @@ header {
     min-height: 112px;
     background: url(../img/white1-bg.png) center no-repeat;
     background-size: 100% 100%;
+    overflow: hidden;
 }
 
 .buy-wrapper {
@@ -859,7 +869,8 @@ header {
 
 .actions-block {
     position: relative;
-    margin: 50px 0 35px;
+    padding: 50px 0 35px;
+    overflow: hidden;
 }
 
 .actions-block::before {
@@ -870,13 +881,13 @@ header {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 133%;
+    height: 116%;
     margin: auto;
     background: url(../img/grunge.png) center 0 no-repeat;
     background-size: cover;
     mix-blend-mode: soft-light;
     opacity: 0.4;
-    z-index: -1;
+    z-index: 0;
 }
 
 .actions-slider {
@@ -986,7 +997,7 @@ footer::before {
     background-size: cover;
     mix-blend-mode: soft-light;
     opacity: 0.4;
-    z-index: -1;
+    z-index: 0;
 }
 
 .recipe-block .container {
@@ -1221,6 +1232,14 @@ footer::before {
     left: 0;
 }
 
+.animateMe {
+    opacity: 0;
+}
+
+.animateMe .animated {
+    opacity: 1;
+}
+
 @media (max-width: 1366px) {
     .recipes-block,
     .buy-block,
@@ -1344,7 +1363,10 @@ footer::before {
     }
 
     .main-block {
-        min-height: 600px;
+        min-height: 600px; 
+    }
+
+    .main-composition {
         background: url(../img/main-composition-mob.png) center -25px no-repeat;
         background-size: 502px;
     }
