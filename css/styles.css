@@ -950,6 +950,7 @@ footer::before {
 }
 
 .footer-wrapper {
+    position: relative;
     display: flex;
     -ms-align-items: center;
     align-items: center;
