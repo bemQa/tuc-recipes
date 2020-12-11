@@ -23,10 +23,30 @@ $(document).ready(function () {
            $('.burger').removeClass('active');
         }
         elementClick = $(this).attr("href");
-        destination = $(elementClick).offset().top-150;
+        destination = $(elementClick).offset().top;
         $('html, body').animate( { scrollTop: destination }, 500, 'swing' );
         return false;
     });
+
+    if(window.innerWidth > 1000) {
+        $(window).on('scroll load', function () {
+            var top = $(window).scrollTop();
+            var href = $('.anchor').attr('href');
+            if(top >= 250) {
+                $('.menu-links, .logo').addClass('fixed');
+            } else {
+                $('.menu-links, .logo').removeClass('fixed');
+            }
+            $('.wrapper section').each(function() {
+                var destination = $(this).offset().top-150;
+                if(top >= destination) {
+                    var id = $(this).attr('id');
+                    $('.anchor[href^="#"]').removeClass('active');
+                    $('.anchor[href^="#'+id+'"]').addClass('active');
+                }
+            });
+        });
+    }
 
     if($('.main-slider').length) {
         $('.main-slider').slick({

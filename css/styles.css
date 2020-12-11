@@ -498,6 +498,15 @@ header {
     z-index: 1;
 }
 
+.logo.fixed {
+    position: fixed;
+    width: 60px;
+    top: 10px;
+    right: 1100px;
+    margin: auto;
+    z-index: 11;
+}
+
 .menu-links {
     position: absolute;
     top: 25px;
@@ -515,7 +524,7 @@ header {
 .menu-links.fixed {
     position: fixed;
     top: 0;
-    background: #FDE908;
+    background: rgba(246, 212, 1, 0.7);
     height: 78px;
     box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -530,6 +539,7 @@ header {
     color: #2D4795;
     margin: 0 16px;
     padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
     transition: all .3s linear;
 }
 
@@ -1380,6 +1390,58 @@ footer::before {
     }
 }
 
+.cookies-block {
+    padding: 140px 0 100px;
+}
+
+.main-cookie-h1 {
+    font-weight: normal;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+.cookies-block p {
+    font-size: 21px;
+    line-height: 152%;
+    margin: 40px 0;
+}
+
+.main-cookie-h3 {
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cookie-text-ul {
+    font-size: 21px;
+    line-height: 152%;
+    padding-left: 50px;
+    list-style: none;
+}
+
+.cookie-text-ul li {
+    position: relative;
+    margin: 20px 0;
+}
+
+.cookie-text-ul li::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -50px;
+    width: 15px;
+    height: 15px;
+    background: #1A4384;
+    transform: rotate(40deg);
+}
+
+.main-cookie-h2 {
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 1366px) {
     .recipes-block,
     .buy-block,
@@ -1496,6 +1558,8 @@ footer::before {
     .menu-links .footer-socials {
         display: flex;
         order: 1;
+        margin-top: 25px;
+        margin-bottom: 0;
     }
 
     .menu-links .footer-socials a {
@@ -1815,6 +1879,38 @@ footer::before {
         }
     }
 
+    .main-cookie-h1 {
+        text-align: center;
+        font-size: 35px;
+        line-height: 42px;
+        margin-bottom: 30px;
+    }
+
+    .cookies-block p {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+
+    .main-cookie-h3,
+    .main-cookie-h2 {
+        font-size: 20px;
+    }
+
+    .cookie-text-ul {
+        font-size: 18px;
+        padding-left: 30px;
+    }
+
+    .cookie-text-ul li {
+        margin: 10px 0;
+    }
+
+    .cookie-text-ul li::before {
+        width: 10px;
+        height: 10px;
+        top: 10px;
+        left: -25px;
+    }
 }
 
 @media (max-width: 370px) {
