@@ -245,6 +245,10 @@ body .mobile-visible {
 	text-decoration: underline;
 }
 
+*:focus {
+    outline: none;
+}
+
 /*SCROLL ---------------------- */
 body .scroll-element,
 body .scroll-element div {

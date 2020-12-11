@@ -23,7 +23,7 @@ $(document).ready(function () {
            $('.burger').removeClass('active');
         }
         elementClick = $(this).attr("href");
-        destination = $(elementClick).offset().top;
+        destination = $(elementClick).offset().top-100;
         $('html, body').animate( { scrollTop: destination }, 500, 'swing' );
         return false;
     });
