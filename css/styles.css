@@ -1241,6 +1241,145 @@ footer::before {
     opacity: 1;
 }
 
+.main-slider {
+    z-index: 1;
+}
+
+.main-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 660px;
+    outline: none;
+}
+
+.composition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.main-slide.onion .composition {
+    background: url(../img/slider/composition-onion.png) center no-repeat;
+    background-size: 639px;
+}
+
+.main-slide.cheese .composition {
+    background: url(../img/slider/composition-cheese.png) center no-repeat;
+    background-size: 640px;
+}
+
+.main-slide.sausages .composition {
+    background: url(../img/slider/composition-sausages.png) center no-repeat;
+    background-size: 642px;
+}
+
+.main-slide.pizza .composition {
+    background: url(../img/slider/composition-pizza.png) center no-repeat;
+    background-size: 639px;
+}
+
+.main-slide.original .composition {
+    background: url(../img/slider/composition-original.png) center no-repeat;
+    background-size: 640px;
+}
+
+.main-slide.mini .composition {
+    background: url(../img/slider/composition-mini.png) center no-repeat;
+    background-size: 815px;
+}
+
+.cc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: 3s cc infinite;
+}
+
+.cc1 {
+    top: -300px;
+    left: -900px;
+    animation-delay: .1s;
+}
+
+.cc2 {
+    top: -350px;
+    right: -1000px;
+    animation-delay: .2s;
+}
+
+.cc3 {
+    top: 450px;
+    left: -1100px;
+}
+
+.cc4 {
+    top: 400px;
+    left: -600px;
+    animation-delay: .15s;
+}
+
+.cc5 {
+    top: 500px;
+    right: -750px;
+    animation-delay: .3s;
+}
+
+.cc6 {
+    top: 200px;
+    right: -1300px;
+    animation-delay: .25s;
+}
+
+.main-slide.mini .cc2 {
+    top: -350px;
+    right: -800px;
+}
+
+.main-slide.mini .cc3 {
+    top: -200px;
+    left: 0;
+    right: -1200px;
+}
+
+.main-slide.mini .cc4 {
+    top: 200px;
+    left: -1100px;
+}
+
+.main-slide.mini .cc5 {
+    top: 400px;
+    left: -500px;
+    right: 0;
+}
+
+.main-slide.mini .cc6 {
+    top: 450px;
+    right: -1000px;
+}
+
+@keyframes cc {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
 @media (max-width: 1366px) {
     .recipes-block,
     .buy-block,
@@ -1579,6 +1718,103 @@ footer::before {
         width: 380px;
         margin: auto;
     }
+
+    .main-slide {
+        min-height: 600px;
+    }
+
+    .main-slide.onion .composition {
+        background: url(../img/slider/composition-onion-mob.png) center no-repeat;
+        background-size: 360px;
+    }
+
+    .main-slide.cheese .composition {
+        background: url(../img/slider/composition-cheese-mob.png) center no-repeat;
+        background-size: 375px;
+    }
+
+    .main-slide.sausages .composition {
+        background: url(../img/slider/composition-sausages-mob.png) center no-repeat;
+        background-size: 375px;
+    }
+
+    .main-slide.pizza .composition {
+        background: url(../img/slider/composition-pizza-mob.png) center no-repeat;
+        background-size: 375px;
+    }
+
+    .main-slide.original .composition {
+        background: url(../img/slider/composition-original-mob.png) center no-repeat;
+        background-size: 374px;
+    }
+
+    .main-slide.mini .composition {
+        background: url(../img/slider/composition-mini-mob.png) center no-repeat;
+        background-size: 375px;
+    }
+
+    .cc {
+        display: none;
+    }
+
+    .main-slide.onion .cc1 {
+        display: block;
+        top: 0;
+        left: -350px;
+    }
+
+    .main-slide.cheese .cc3,
+    .main-slide.sausages .cc3,
+    .main-slide.pizza .cc3,
+    .main-slide.original .cc3 {
+        display: block;
+        top: 0;
+        left: -350px;
+    }
+
+    .main-slide.onion .cc6,
+    .main-slide.cheese .cc6,
+    .main-slide.sausages .cc6,
+    .main-slide.pizza .cc6,
+    .main-slide.original .cc6 {
+        display: block;
+        top: -150px;
+        right: -350px;
+    }
+
+    .main-slide.mini .cc1 {
+        display: block;
+        top: -250px;
+        left: -300px;
+    }
+
+    .main-slide.mini .cc3 {
+        display: block;
+        top: -50px;
+        left: -250px;
+        right: 0;
+    }
+
+    .main-slide.mini .cc6 {
+        display: block;
+        top: -150px;
+        right: -300px;
+    }
+
+    @keyframes cc {
+        0% {
+            transform: translateY(-10px) scale(.7);
+        }
+
+        50% {
+            transform: translateY(10px) scale(.7);
+        }
+
+        100% {
+            transform: translateY(-10px) scale(.7);
+        }
+    }
+
 }
 
 @media (max-width: 370px) {

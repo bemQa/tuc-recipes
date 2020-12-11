@@ -28,6 +28,21 @@ $(document).ready(function () {
         return false;
     });
 
+    if($('.main-slider').length) {
+        $('.main-slider').slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            autoplay: true,
+            autoplaySpeed: 4000
+        });
+    }
+
     if($('.recipes-slider').length) {
         $('.recipes-slider').slick({
             dots: false,
