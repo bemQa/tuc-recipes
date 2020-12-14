@@ -75,7 +75,8 @@ $(document).ready(function () {
                     breakpoint: 1000,
                     settings: {
                         slidesToShow: 1,
-                        arrows: false
+                        arrows: false,
+                        variableWidth: true
                     }
                 }
             ]
