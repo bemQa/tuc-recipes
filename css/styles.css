@@ -674,6 +674,13 @@ header {
     letter-spacing: 0.03em;
 }
 
+.title span {
+    font-family: 'PF Din Text Cond Pro';
+    font-size: 24px;
+    line-height: 93%;
+    letter-spacing: normal;
+}
+
 .recipes-title {
     color: #fff;
 }
@@ -1926,6 +1933,10 @@ footer::before {
         height: 10px;
         top: 10px;
         left: -25px;
+    }
+
+    .title span {
+        font-size: 18px;
     }
 }
 
