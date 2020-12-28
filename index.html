@@ -150,26 +150,6 @@
 							</div>
 						</div>
 						<div class="recipe-slide animateMe" data-animation="fadeInUpBig" data-animation-delay="0.2s">
-							<div class="recipe-slide-content bg1">
-								<div class="recipe-slide-name">
-									TUC <br>
-									<img src="img/tuc/pizza.png" alt="">
-									пицца 4 сыра
-								</div>
-								<div class="recipe-slide-img">
-									<img src="img/recipes/recipe1.png" alt="">
-								</div>
-								<div class="btn-wrapper">
-									<a href="recipe1.html" class="btn">
-										<svg width="194" height="51" viewBox="0 0 194 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M194 0L0 12.6391V51H194V0Z" fill="#E92327"/>
-										</svg>
-										<span>Подробнее</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="recipe-slide animateMe" data-animation="fadeInUpBig" data-animation-delay="0.4s">
 							<div class="recipe-slide-content bg2">
 								<div class="recipe-slide-name">
 									TUC <br>
@@ -189,7 +169,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="recipe-slide">
+						<div class="recipe-slide animateMe" data-animation="fadeInUpBig" data-animation-delay="0.4s">
 							<div class="recipe-slide-content bg3">
 								<div class="recipe-slide-name">
 									TUC <br>
@@ -509,6 +489,26 @@
 								</div>
 							</div>
 						</div>
+						<div class="recipe-slide">
+							<div class="recipe-slide-content bg1">
+								<div class="recipe-slide-name">
+									TUC <br>
+									<img src="img/tuc/pizza.png" alt="">
+									пицца 4 сыра
+								</div>
+								<div class="recipe-slide-img">
+									<img src="img/recipes/recipe1.png" alt="">
+								</div>
+								<div class="btn-wrapper">
+									<a href="recipe1.html" class="btn">
+										<svg width="194" height="51" viewBox="0 0 194 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M194 0L0 12.6391V51H194V0Z" fill="#E92327"/>
+										</svg>
+										<span>Подробнее</span>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -667,10 +667,41 @@
 			</div>
 		</footer>
 	</div>
+	<div class="popups">
+		<div id="announce" class="popup">
+			<div class="popup__wrap">
+				<a href="#!" class="close-popup js-close-popup">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M18.0078 2L2.00781 18" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    					<path d="M2.00781 2L18.0078 18" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</a>
+                <div class="popup__inner">
+                	<div class="action-slide">
+						<div class="action-img">
+							<img src="img/actions/action_desc_01.jpg" class="desktop-visible" alt="">
+							<img src="img/actions/action_mobi_01.jpg" class="mobile-visible" alt="">
+						</div>
+						<div class="action-bottom">
+							<div class="btn-wrapper">
+								<a href="#!" class="btn">
+									<svg width="238" height="62" viewBox="0 0 238 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M237.472 0L0 15.3652V62H237.472V0Z" fill="#E92327"/>
+									</svg>
+									<span>Подробнее</span>
+								</a>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+		</div>
+	</div>
 
 	<script src="libs/jquery-3.5.1.min.js"></script>
 	<script src="libs/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="libs/jquery.cookie.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
 </html>

@@ -48,6 +48,32 @@ $(document).ready(function () {
         });
     }
 
+    function OpenPopup(popupId) {
+        $('body').removeClass('no-scrolling');
+        $('.popup').removeClass('js-popup-show');
+        popupId = '#' + popupId;
+        $(popupId).addClass('js-popup-show');
+        $('body').addClass('no-scrolling');
+    }
+    $('.pop-op').click(function (e) {
+        e.preventDefault();
+        let data = $(this).data('popup');
+        OpenPopup(data);
+    });
+    function closePopup() {
+        $('.js-close-popup').on('click', function (e) {
+            e.preventDefault();
+            $('.popup').removeClass('js-popup-show');
+            $('body').removeClass('no-scrolling');
+        });
+    }
+    closePopup();
+    function clickClosePopup(popupId) {
+        popupId = '#' + popupId;
+        $(popupId).removeClass('js-popup-show');
+        $('body').removeClass('no-scrolling');
+    }
+
     if($('.main-slider').length) {
         $('.main-slider').slick({
             dots: false,
@@ -121,6 +147,16 @@ $(document).ready(function () {
     }
 
     scrollWaypointInit($('.animateMe'));
+
+    // set cookie
+    if($('#announce').length) {
+        if($.cookie("announce") == null) {
+            OpenPopup('announce');
+        }
+        $('#announce .js-close-popup').click(function(e){
+            $.cookie("announce", 1, { path: '/' });
+        });
+    }
 });
 
 ( function() {
