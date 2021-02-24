@@ -921,6 +921,7 @@ header {
 }
 
 .action-img {
+    display: block;
     padding-bottom: 95px;
 }
 
