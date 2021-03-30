@@ -146,6 +146,19 @@ $(document).ready(function () {
         });
     }
 
+    if($('.videos-slider').length) {
+        $('.videos-slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear'
+        });
+    }
+
     scrollWaypointInit($('.animateMe'));
 
     // set cookie

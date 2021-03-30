@@ -763,7 +763,8 @@ header {
     background-size: contain;
 }
 
-.recipes-slider .slick-prev {
+.recipes-slider .slick-prev,
+.videos-slider .slick-prev {
     background: url(../img/arrow-left-white.svg) center no-repeat;
     background-size: contain;
 }
@@ -774,7 +775,8 @@ header {
     background-size: contain;
 }
 
-.recipes-slider .slick-next {
+.recipes-slider .slick-next,
+.videos-slider .slick-next {
     background: url(../img/arrow-right-white.svg) center no-repeat;
     background-size: contain;
 }
@@ -861,6 +863,7 @@ header {
 }
 
 .buy-block {
+    position: relative;
     display: flex;
     align-items: center;
     min-height: 112px;
@@ -1515,9 +1518,63 @@ footer::before {
     stroke: #0A3074;
 }
 
+.videos-block {
+    position: relative;
+    top: -20px;
+    min-height: 700px;
+    padding: 50px 0 100px;
+    background: url(../img/blue1-bg.png) center no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.videos-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.videos-slider {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    margin: 40px auto 0;
+}
+
+.videos-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 812px;
+    height: 462px;
+    background: url(../img/videos-bg.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+.video-slide .youtube-wrapper {
+    max-width: 762px;
+    margin: auto;
+}
+
 @media (max-width: 1366px) {
     .recipes-block,
     .buy-block,
+    .videos-block,
     footer {
         background-size: cover;
     }
@@ -1673,8 +1730,15 @@ footer::before {
         background-size: 100% 100%;
     }
 
+    .buy-block .container {
+        padding: 0;
+    }
+
     .buy-wrapper {
         flex-wrap: wrap;
+        max-width: 300px;
+        width: 100%;
+        margin: auto;
     }
 
     .buy-title {
@@ -2010,5 +2074,45 @@ footer::before {
         right: 0;
         margin: auto;
         justify-content: center;
+    }
+
+    .videos-block {
+        top: -30px;
+        min-height: 500px;
+        padding: 40px 0 100px;
+        background: url(../img/blue1-bg-mob.png) center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .videos-block .container {
+        padding: 0;
+    }
+
+    .videos-block .title {
+        padding: 0 15px;
+    }
+
+    .videos-slider {
+        max-width: 376px;
+        margin: 30px auto 0;
+    }
+
+    .videos-slider::before {
+        display: none;
+    }
+
+    .videos-slider .slick-arrow {
+        top: auto;
+        bottom: -80px;
+    }
+
+    .videos-slider .slick-prev {
+        left: -60px;
+        right: 0;
+    }
+
+    .videos-slider .slick-next {
+        left: 0;
+        right: -60px;
     }
 }
