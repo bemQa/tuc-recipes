@@ -1576,6 +1576,101 @@ footer::before {
     margin: auto;
 }
 
+.tooltip {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    width: 300px;
+    height: 196px;
+    padding: 44px 26px;
+    text-align: center;
+    background: url(../img/tooltip-bg.svg) center no-repeat;
+    background-size: contain;
+    z-index: 3;
+}
+
+.tooltip img {
+    width: 134px;
+    margin: auto;
+}
+
+.tooltip-text {
+    font-family: 'Peach Milk 2.0';
+    font-size: 34px;
+    line-height: 36px;
+    text-align: center;
+    color: #004F91;
+    text-shadow: 4px 0px 0px #FFFFFF;
+    margin-bottom: 5px;
+}
+
+.close-tooltip {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.close-tooltip span {
+    margin-right: 5px;
+    transition: all .2s linear;
+}
+
+.close-tooltip svg,
+.close-tooltip svg path {
+    transition: all .2s linear;
+}
+
+.close-tooltip:hover svg path {
+    stroke: #27C2EE;
+}
+
+.close-tooltip:hover span {
+    color: #27C2EE;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99px;
+    height: 29px;
+    margin: auto;
+    background: none;
+}
+
+.menu-btn span {
+    font-family: 'Peach Milk 2.0';
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.menu-btn svg  {
+    position: absolute;
+    z-index: 0;
+}
+
+.menu-btn svg,
+.menu-btn svg path {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.menu-btn:hover svg path {
+    fill: #278EEE;
+}
+
+.menu-btn.disabled svg path {
+    fill: #278EEE;
+}
+
 @media (max-width: 1366px) {
     .recipes-block,
     .buy-block,

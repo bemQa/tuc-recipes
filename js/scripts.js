@@ -74,6 +74,14 @@ $(document).ready(function () {
         $('body').removeClass('no-scrolling');
     }
 
+    function closeTooltip() {
+        $('.js-close-tooltip').on('click', function (e) {
+            e.preventDefault();
+            $('.tooltip').fadeOut();
+        });
+    }
+    closeTooltip();
+
     if($('.main-slider').length) {
         $('.main-slider').slick({
             dots: false,
