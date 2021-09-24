@@ -468,7 +468,7 @@ body {
 body {
     margin: 0;
     color: #1A4384;
-    font: normal 16px/19px 'Gotham Pro', sans-serif;
+    font: normal 16px/19px 'PF Din Text Cond Pro', sans-serif;
 }
 
 .wrapper {
@@ -675,27 +675,17 @@ header {
     font-family: 'Peach Milk 2.0';
     font-size: 64px;
     line-height: 1;
-    text-align: center;
     letter-spacing: 0.03em;
 }
 
 .title span {
-    font-family: 'Gotham Pro';
+    font-family: 'PF Din Text Cond Pro';
     font-size: 24px;
     line-height: 93%;
     letter-spacing: normal;
 }
 
-.subtitle {
-    font-family: 'Gotham Pro';
-    font-size: 20px;
-    line-height: 93%;
-    letter-spacing: normal;
-    text-align: center;
-    margin-top: 15px;
-}
-
-.white-title {
+.recipes-title {
     color: #fff;
 }
 
@@ -703,7 +693,8 @@ header {
     position: relative;
     min-height: 700px;
     padding: 50px 0 100px;
-    background: #fff;
+    background: url(../img/blue1-bg.png) center no-repeat;
+    background-size: 100% 100%;
     overflow: hidden;
 }
 
@@ -717,62 +708,41 @@ header {
     width: 100%;
     height: 100%;
     margin: auto;
-    background: #fff;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
     z-index: 0;
 }
 
 .recipes-slider {
-    margin: 45px auto 30px;
+    margin-top: 40px;
 }
 
 .recipe-slide-content {
     position: relative;
-    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 320px;
     width: 100%;
-    min-height: 300px;
-    margin: auto;
+    min-height: 446px;
+    padding: 30px 25px 30px 28px;
 }
 
-.recipe-slide-img {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
+.recipe-slide-content.bg1 {
+    background: url(../img/recipe-bg1.png) center no-repeat;
+    background-size: cover;
 }
 
-.recipe-static {
-    position: absolute;
+.recipe-slide-content.bg2 {
+    background: url(../img/recipe-bg2.png) center no-repeat;
+    background-size: cover;
 }
 
-.recipe-static:hover {
-    opacity: 0;
-}
-
-.recipes-slider-text {
-    position: relative;
-    max-width: 540px;
-    padding-left: 34px;
-    margin: auto;
-    font-size: 16px;
-    line-height: 93%;
-    text-align: center;
-    color: #003087;
-}
-
-.recipes-slider-text span {
-    opacity: 0.5;
-}
-
-.recipes-slider-text::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    bottom: 0;
-    width: 34px;
-    height: 34px;
-    background: url(../img/hover-icon.svg) center no-repeat;
-    background-size: contain;
+.recipe-slide-content.bg3 {
+    background: url(../img/recipe-bg3.png) center no-repeat;
+    background-size: cover;
 }
 
 .slick-arrow {
@@ -791,18 +761,14 @@ header {
     transform: scale(.9);
 }
 
-.slick-disabled {
-    opacity: 0.5;
-}
-
 .slick-prev {
     left: -45px;
     background: url(../img/arrow-left.svg) center no-repeat;
     background-size: contain;
 }
 
-.products-slider .slick-prev,
-.actions-slider .slick-prev {
+.recipes-slider .slick-prev,
+.videos-slider .slick-prev {
     background: url(../img/arrow-left-white.svg) center no-repeat;
     background-size: contain;
 }
@@ -813,18 +779,46 @@ header {
     background-size: contain;
 }
 
-.products-slider .slick-next,
-.actions-slider .slick-next {
+.recipes-slider .slick-next,
+.videos-slider .slick-next {
     background: url(../img/arrow-right-white.svg) center no-repeat;
     background-size: contain;
+}
+
+.recipe-slide-name {
+    position: relative;
+    font-family: 'Peach Milk 2.0';
+    font-size: 46px;
+    line-height: 93%;
+    letter-spacing: 0.03em;
+    z-index: 1;
+}
+
+.recipe-slide-name img {
+    position: absolute;
+    top: -35px;
+    left: 35px;
+    transform: scale(.7);
+}
+
+.recipe-slide-img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 170px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: auto;
 }
 
 .products-block {
     position: relative;
     min-height: 456px;
-    padding: 35px 0 80px;
-    background: url(../img/blue1-bg.png) center no-repeat;
-    background-size: 100% 100%;
+    padding: 35px 0 60px;
+    background: url(../img/tuc-bg.png) center no-repeat;
+    background-size: 731px;
+    overflow: hidden;
 }
 
 .products-block::before {
@@ -835,7 +829,7 @@ header {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 110%;
+    height: 133%;
     margin: auto;
     background: url(../img/grunge.png) center 0 no-repeat;
     background-size: cover;
@@ -844,35 +838,12 @@ header {
     z-index: 0;
 }
 
-.products-slider {
-    margin: 50px auto;
-}
-
-.product {
-    position: relative;
-}
-
 .product-img {
-    position: relative;
     display: flex;
     -ms-align-items: center;
     align-items: center;
     justify-content: center;
     min-height: 275px;
-}
-
-.product-img::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50px;
-    right: -50px;
-    bottom: 0;
-    margin: auto;
-    width: 272px;
-    height: 239px;
-    background: url(../img/product-bg.png) center no-repeat;
-    background-size: contain;
 }
 
 .product-img img {
@@ -885,115 +856,12 @@ header {
     line-height: 1;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #fff;
 }
 
 .product-weight {
     font-family: 'Peach Milk 2.0';
     font-size: 14px;
     line-height: 1;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.recipes-btn {
-    position: relative;
-    display: block;
-    width: 269px;
-    height: 57px;
-    margin: auto;
-    background: url(../img/recipes-btn.svg) center no-repeat;
-    background-size: contain;
-}
-
-.specification-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 164px;
-    height: 38px;
-    margin: 0 auto;
-    background: url(../img/specification-btn.png) center no-repeat;
-    background-size: contain;
-    font-family: 'Peach Milk 2.0';
-    font-size: 18px;
-    line-height: 1;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: #003087;
-}
-
-.specification-tooltip {
-    position: absolute;
-    bottom: -420px;
-    left: 0;
-    /*right: 0;*/
-    margin: auto;
-    width: 459px;
-    padding: 160px 30px 30px 50px;
-    background: url(../img/specification-bg.png) center no-repeat;
-    background-size: 100% 100%;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 2;
-    text-align: center;
-}
-
-.specification-tooltip.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.close-specification-tooltip {
-    position: absolute;
-    top: 40px;
-    right: 30px;
-    width: 20px;
-    height: 20px;
-    background: url(../img/close-tooltip.svg) center no-repeat;
-    background-size: contain;
-}
-
-.specification-title {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: 381px;
-    height: 154px;
-    background: url(../img/specification-title.png) center no-repeat;
-    background-size: contain;
-}
-
-.specification-text {
-    font-size: 14px;
-    line-height: 130%;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 20px;
-}
-
-.specification-text.mb10 {
-    margin-bottom: 10px;
-}
-
-.specification-text.mb0 {
-    margin-bottom: 0;
-}
-
-.specification-char {
-    font-size: 14px;
-    line-height: 130%;
-    text-align: center;
-    letter-spacing: 0.03em;
-    margin-bottom: 10px;
-}
-
-.specification-subtitle {
-    font-family: 'Peach Milk 2.0';
-    font-size: 24px;
-    line-height: 146.5%;
     text-align: center;
     letter-spacing: 0.03em;
 }
@@ -1003,11 +871,9 @@ header {
     display: flex;
     align-items: center;
     min-height: 112px;
-    margin-top: -30px;
     background: url(../img/white1-bg.png) center no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
-    z-index: 1;
 }
 
 .buy-wrapper {
@@ -1032,16 +898,14 @@ header {
 
 .actions-block {
     position: relative;
-    padding: 50px 0 100px;
-    background: url(../img/blue1-bg.png) center no-repeat;
-    background-size: 100% 100%;
+    padding: 50px 0 35px;
     overflow: hidden;
 }
 
 .actions-block::before {
     content: '';
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -1055,22 +919,6 @@ header {
     z-index: 0;
 }
 
-.actions-block::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 40px;
-    background: #fff;
-    z-index: 0;
-}
-
-.actions-block .container {
-    max-width: 1208px;
-}
-
 .actions-slider {
     margin-top: 30px;
 }
@@ -1081,10 +929,24 @@ header {
 
 .action-img {
     display: block;
+    padding-bottom: 95px;
 }
 
 .action-img .mobile-visible {
     display: none;
+}
+
+.action-bottom {
+    position: absolute;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 118px;
+    background: url(../img/action-bottom.png) center no-repeat;
+    background-size: 100% 100%;
 }
 
 footer {
@@ -1096,11 +958,11 @@ footer {
     flex: 0 0 auto;
     min-height: 120px;
     text-align: center;
-    background: url(../img/footer-bg.png) center no-repeat #fff;
+    background: url(../img/footer-bg.png) center no-repeat;
     background-size: 100% 100%;
 }
 
-/*footer::before {
+footer::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1115,7 +977,7 @@ footer {
     mix-blend-mode: soft-light;
     opacity: 0.4;
     z-index: 0;
-}*/
+}
 
 .footer-wrapper {
     position: relative;
@@ -1148,6 +1010,195 @@ footer {
     margin: 0 20px;
 }
 
+.recipe-block {
+    position: relative;
+}
+
+.recipe-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.recipe-block .container {
+    max-width: 1070px;
+}
+
+.recipe-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    margin-bottom: 100px;
+}
+
+.recipe-info {
+    position: relative;
+    max-width: 335px;
+    width: 100%;
+}
+
+.recipe-name {
+    position: relative;
+    font-family: 'Peach Milk 2.0';
+    font-size: 64px;
+    line-height: 93%;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.recipe-name img {
+    position: absolute;
+    top: -30px;
+    left: 75px;
+}
+
+.recipe-text {
+    position: relative;
+    max-width: 225px;
+    font-size: 14px;
+    line-height: 1;
+    z-index: 2;
+}
+
+.recipe-img {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 90px;
+    right: -100px;
+    z-index: 1;
+}
+
+.recipe3 .recipe-img {
+    top: 200px;
+}
+
+.recipe4 .recipe-img {
+    top: 160px;
+}
+
+.recipe6 .recipe-img {
+    top: 240px;
+    right: -125px;
+}
+
+.recipe7 .recipe-img {
+    top: 130px;
+}
+
+.recipe8 .recipe-img {
+    top: 160px;
+}
+
+.recipe10 .recipe-img {
+    top: 140px;
+}
+
+.recipe15 .recipe-img {
+    top: 150px;
+}
+
+.recipe16 .recipe-img {
+    top: 120px;
+}
+
+.recipe-how {
+    position: relative;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 520px;
+    width: 100%;
+    padding: 70px 0 80px;
+}
+
+.recipe-how::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    width: 693px;
+    height: 451px;
+    margin: auto;
+    background: url(../img/blue-recipe-bg.png) center no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.recipe-how::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: -100px;
+    bottom: 0;
+    width: 693px;
+    height: 451px;
+    margin: auto;
+    background: url(../img/grunge.png) center 0 no-repeat;
+    background-size: cover;
+    mix-blend-mode: soft-light;
+    opacity: 0.4;
+    z-index: 0;
+}
+
+.recipe-how * {
+    position: relative;
+}
+
+.recipes-composition-wrapper {
+    position: relative;
+    min-height: 650px;
+}
+
+.recipe-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 132px;
+    width: 100%;
+}
+
+.recipes-composition {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipes-composition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: url(../img/rhomb.png) center no-repeat;
+    background-size: 737px;
+    mix-blend-mode: multiply;
+    opacity: 0.3;
+    z-index: -1;
+}
+
 /* youtube lazyload */
 .youtube-wrapper {
     max-width: 520px;
@@ -1168,24 +1219,27 @@ footer {
     right: 0;
     bottom: 0;
     margin: auto;
-    opacity: 0.95;
+    opacity: 0.7;
 }
 .youtube .play-button {
-    width: 118px;
-    height: 118px;
+    width: 74px;
+    height: 74px;
+    box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
     z-index: 1;
+    border-radius: 50px;
+    border: 5px solid #FFD74B;
 }
 .youtube .play-button:before {
     content: "";
+    background: url(../img/pl.svg) center no-repeat;
+    background-size: cover;
+    width: 28px;
+    height: 34px;
     top: 0;
-    left: 0;
+    left: 6px;
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 118px;
-    height: 118px;
-    background: url(../img/play-btn.png) center no-repeat;
-    background-size: cover;
 }
 .youtube img,
 .youtube .play-button {
@@ -1477,9 +1531,10 @@ footer {
     position: relative;
     top: -20px;
     min-height: 700px;
-    padding: 60px 0 30px;
-    background: url(../img/tuc-bg.png) center 0 no-repeat;
-    background-size: 731px;
+    padding: 50px 0 100px;
+    background: url(../img/blue1-bg.png) center no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
 }
 
 .videos-block::before {
@@ -1490,7 +1545,7 @@ footer {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: 110%;
+    height: 100%;
     margin: auto;
     background: url(../img/grunge.png) center 0 no-repeat;
     background-size: cover;
@@ -1503,7 +1558,7 @@ footer {
     position: relative;
     max-width: 1000px;
     width: 100%;
-    margin: 50px auto 40px;
+    margin: 40px auto 0;
 }
 
 .videos-slider::before {
@@ -1525,16 +1580,6 @@ footer {
     margin: auto;
 }
 
-.videos-btn {
-    position: relative;
-    display: block;
-    width: 371px;
-    height: 57px;
-    margin: auto;
-    background: url(../img/youtube-btn.svg) center no-repeat;
-    background-size: contain;
-}
-
 .tooltip {
     position: fixed;
     top: 200px;
@@ -1546,7 +1591,6 @@ footer {
     background: url(../img/tooltip-bg.svg) center no-repeat;
     background-size: contain;
     z-index: 3;
-    filter: drop-shadow(-6px 8px 16px rgba(0, 0, 0, 0.15));
 }
 
 .tooltip img {
@@ -1652,7 +1696,7 @@ footer {
 
 @media (max-width: 1000px) {
     .container,
-    .actions-block .container {
+    .recipe-block .container {
         max-width: 375px;
     }
 
@@ -1770,73 +1814,18 @@ footer {
         background-size: 460px;
     }
 
-    .recipes-block {
-        min-height: 500px;
-        padding: 20px 0 50px;
-    }
-
-    .recipes-slider {
-        max-width: 320px;
+    .recipes-block .container {
+        padding-right: 0;
     }
 
     .recipe-slide {
         max-width: 320px;
         width: 100%;
-        margin: 0 auto;
+        margin-right: 15px;
     }
 
-    .slick-active .recipe-static,
-    .recipe-static:hover {
-        opacity: 0;
-    }
-
-    .products-slider .slick-arrow {
-        top: 210px;
-        width: 16px;
-        height: 24px;
-    }
-
-    .products-slider .slick-prev {
-        left: 0;
-    }
-
-    .products-slider .slick-next {
-        right: 0;
-    }
-
-    .specification-tooltip {
-        bottom: -300px;
-        right: 0;
-        width: 320px;
-        padding: 110px 20px 20px 30px;
-    }
-
-    .specification-title {
-        top: 9px;
-        left: 15px;
-        width: 229px;
-        height: 92px;
-    }
-
-    .specification-text {
-        margin-bottom: 15px;
-    }
-
-    .specification-text,
-    .specification-char {
-        font-size: 12px;
-    }
-
-    .specification-text.mb10 {
-        margin-bottom: 5px;
-    }
-
-    .specification-text.mb0 {
-        margin-bottom: 0;
-    }
-
-    .specification-subtitle {
-        font-size: 20px;
+    .products-block {
+        background-size: 430px;
     }
 
     .buy-block {
@@ -1866,20 +1855,10 @@ footer {
         margin: 10px 15px;
     }
 
-    .actions-block .container {
-        padding-right: 0;
-    }
-
     .actions-slider {
-        max-width: 340px;
-        width: 100%;
-        margin: 30px auto 0;
-    }
-
-    .action-img {
         max-width: 310px;
         width: 100%;
-        margin-right: 20px;
+        margin: 30px auto 0;
     }
 
     .action-img .desktop-visible {
@@ -1913,9 +1892,147 @@ footer {
         order: -1;
         margin-bottom: 25px;
     }
+    
+    .recipe-content {
+        position: relative;
+        flex-direction: column;
+        margin-bottom: 0;
+        margin-bottom: 20px;
+    }
+
+    .recipe-content::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        right: -100px;
+        bottom: 0;
+        width: 460px;
+        height: 440px;
+        margin: auto;
+        background: url(../img/rhomb.png) center no-repeat;
+        background-size: 460px;
+        mix-blend-mode: multiply;
+        opacity: 0.3;
+        z-index: 0;
+    }
+
+    .recipe-info {
+        margin: 0 auto 20px;
+    }
+
+    .recipe-name {
+        font-size: 46px;
+    }
+
+    .recipe-name img {
+        top: -35px;
+        left: 35px;
+        transform: scale(.7);
+    }
+
+    .recipe-img {
+        top: 50px;
+        transform: scale(.7);
+    }
+
+    .recipe3 .recipe-img {
+        top: 100px;
+    }
+
+    .recipe4 .recipe-img {
+        top: 35px;
+    }
+
+    .recipe6 .recipe-img {
+        top: 110px;
+        right: -115px;
+    }
+
+    .recipe7 .recipe-img {
+        top: 50px;
+        right: -60px;
+    }
+
+    .recipe8 .recipe-img {
+        top: 110px;
+    }
+
+    .recipe9 .recipe-img {
+        right: -60px;
+    }
+
+    .recipe10 .recipe-img {
+        top: 50px;
+        right: -70px;
+    }
+
+    .recipe14 .recipe-img {
+        right: -60px;
+    }
+
+    .recipe15 .recipe-img {
+        top: 110px;
+        right: -60px;
+    }
+
+    .recipe16 .recipe-img {
+        top: 110px;
+        right: -60px;
+    }
+
+    .recipe17 .recipe-img {
+        right: -70px;
+    }
+
+    .recipe18 .recipe-img {
+        right: -70px;
+    }
+
+    .recipe-how {
+        padding: 40px 0 45px;
+    }
+
+    .recipe-how::before {
+        width: 375px;
+        height: 265px;
+        margin: auto;
+        background: url(../img/blue-recipe-bg-mob.png) center no-repeat;
+        background-size: cover; 
+    }
+
+    .recipe-how::after {
+        width: 375px;
+        height: 265px;
+    }
+
+    .recipe-how img {
+        width: 290px;
+    }
 
     .youtube-wrapper {
         max-width: 290px;
+    }
+
+    .recipes-composition-wrapper {
+        min-height: 350px;
+    }
+
+    .recipes-composition {
+        position: relative;
+    }
+
+    .recipes-composition::before {
+        display: none;
+    }
+
+    .recipes-composition img {
+        position: absolute;
+        top: 0;
+        left: -100px;
+        right: -100px;
+        width: 380px;
+        margin: auto;
     }
 
     .main-slide {
@@ -2073,9 +2190,9 @@ footer {
     .videos-block {
         top: -30px;
         min-height: 500px;
-        padding: 40px 0;
-        background-position: center 25px;
-        background-size: 430px;
+        padding: 40px 0 100px;
+        background: url(../img/blue1-bg-mob.png) center no-repeat;
+        background-size: 100% 100%;
     }
 
     .videos-block .container {
@@ -2088,75 +2205,25 @@ footer {
 
     .videos-slider {
         max-width: 376px;
-        margin: 30px auto 100px;
+        margin: 30px auto 0;
     }
 
     .videos-slider::before {
         display: none;
     }
 
-    .youtube .play-button,
-    .youtube .play-button:before {
-        width: 60px;
-        height: 60px;
-    }
-
-    .videos-slider .slick-arrow,
-    .recipes-slider .slick-arrow {
+    .videos-slider .slick-arrow {
         top: auto;
-        bottom: -50px;
-        width: 16px;
-        height: 24px;
+        bottom: -80px;
     }
 
-    .videos-slider .slick-prev,
-    .recipes-slider .slick-prev {
-        left: 10px;
-    }
-
-    .videos-slider .slick-next,
-    .recipes-slider .slick-next {
-        right: 10px;
-    }
-
-    .videos-slider .slick-dots,
-    .recipes-slider .slick-dots {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: -40px;
-        left: 0;
+    .videos-slider .slick-prev {
+        left: -60px;
         right: 0;
-        margin: auto;
     }
 
-    .videos-slider .slick-dots li,
-    .recipes-slider .slick-dots li {
-        width: 12px;
-        height: 12px;
-        margin: 4px;
-    }
-
-    .videos-slider .slick-dots li button,
-    .recipes-slider .slick-dots li button {
-        width: 12px;
-        height: 12px;
-        border-radius: 10px;
-        background: #003087;
-        opacity: 0.5;
-        font-size: 0;
-    }
-
-    .videos-slider .slick-dots li.slick-active button,
-    .recipes-slider .slick-dots li.slick-active button {
-        opacity: 1;
-    }
-
-    .videos-btn {
-        width: 317px;
-        height: 94px;
-        background: url(../img/youtube-btn-mob.svg) center no-repeat;
-        background-size: contain;
+    .videos-slider .slick-next {
+        left: 0;
+        right: -60px;
     }
 }

@@ -97,18 +97,39 @@ $(document).ready(function () {
         });
     }
 
-    if($('.products-slider').length) {
-        $('.products-slider').slick({
+    if($('.recipes-slider').length) {
+        $('.recipes-slider').slick({
             dots: false,
             arrows: true,
-            infinite: false,
+            infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
                 {
                     breakpoint: 1000,
                     settings: {
-                        slidesToShow: 1
+                        slidesToShow: 1,
+                        arrows: false,
+                        variableWidth: true
+                    }
+                }
+            ]
+        });
+    }
+
+    if($('.products-slider').length) {
+        $('.products-slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false
                     }
                 }
             ]
@@ -119,15 +140,14 @@ $(document).ready(function () {
         $('.actions-slider').slick({
             dots: false,
             arrows: true,
-            infinite: false,
+            infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             responsive: [
                 {
                     breakpoint: 1000,
                     settings: {
-                        arrows: false,
-                        variableWidth: true
+                        arrows: false
                     }
                 }
             ]
@@ -138,20 +158,12 @@ $(document).ready(function () {
         $('.videos-slider').slick({
             dots: false,
             arrows: true,
-            infinite: false,
+            infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             speed: 500,
             fade: true,
-            cssEase: 'linear',
-            responsive: [
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        dots: true
-                    }
-                }
-            ]
+            cssEase: 'linear'
         });
     }
 
@@ -165,89 +177,6 @@ $(document).ready(function () {
         $('#announce .js-close-popup').click(function(e){
             $.cookie("announce", 1, { path: '/' });
         });
-    }
-
-    if($(window).innerWidth() > 1000) {
-        $('.specification-btn').each(function(i, e){
-            let tooltip_id = $(this).data('id');
-            let pos_left = $(this).offset().left;
-            $('.specification-tooltip#'+tooltip_id).css({
-                'left': pos_left-150
-            });
-        });
-    }
-
-    $('.specification-btn').click(function(e) {
-        e.preventDefault();
-        $('.specification-tooltip.active').removeClass('active');
-        let tooltip_id = $(this).data('id');
-        if($(window).innerWidth() > 1000) {
-            let pos_left = $(this).offset().left;
-            $('.specification-tooltip#'+tooltip_id).css({
-                'left': pos_left-150
-            });
-        }
-        $('.specification-tooltip#'+tooltip_id).addClass('active');
-        $('body').on('click', function (e) {
-            var div = $('.specification-tooltip, .specification-btn');
-
-            if (!div.is(e.target) && div.has(e.target).length === 0) {
-                div.removeClass('active');
-            }
-        });
-    });
-
-    $('.close-specification-tooltip').click(function(e) {
-        e.preventDefault();
-        $(this).parent().removeClass('active');
-    })
-
-    if($(window).innerWidth() > 1000) {
-        $('.recipe-static').mouseenter(function(e){
-            let url = $(this).data('recipe');
-            let html = 'img/recipes/'+url+'.gif'
-            $(this).next().attr('src', html);
-
-            $('.recipe-static').mouseleave(function(e){
-                url, html = null;
-                $(this).next().attr('src', '');
-            });
-        });
-    }
-
-    if($('.recipes-slider').length) {
-        $('.recipes-slider').slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 1,
-                        dots: true
-                    }
-                }
-            ]
-        });
-
-        if($(window).innerWidth() < 1000) {
-            let elem = $('.recipes-slider').find('.slick-active .recipe-static');
-            let url = elem.data('recipe');
-            let html = 'img/recipes/'+url+'.gif'
-            elem.next().attr('src', html);
-
-            $('.recipes-slider').on('afterChange', function(event, slick, currentSlide){
-                let prev_slide = $(this).find('.slick-active').prev();
-                let elem = $(this).find('.slick-active .recipe-static');
-                let url = elem.data('recipe');
-                let html = 'img/recipes/'+url+'.gif'
-                elem.next().attr('src', html);
-                prev_slide.find('.recipe-static').next().attr('src', '');
-            });
-        }
     }
 });
 
