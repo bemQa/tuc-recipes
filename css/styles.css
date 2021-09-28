@@ -561,7 +561,7 @@ header {
 
 .main-block {
     position: relative;
-    min-height: 660px;
+    min-height: 550px;
 }
 
 .main-composition {
@@ -701,8 +701,8 @@ header {
 
 .recipes-block {
     position: relative;
-    min-height: 700px;
-    padding: 50px 0 100px;
+    min-height: 590px;
+    padding: 20px 0 60px;
     background: #fff;
     overflow: hidden;
 }
@@ -1225,8 +1225,9 @@ footer {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 660px;
+    min-height: 550px;
     outline: none;
+    transform: scale(.8);
 }
 
 .composition {
@@ -1805,7 +1806,7 @@ footer {
     }
 
     .specification-tooltip {
-        bottom: -300px;
+        bottom: 40px;
         right: 0;
         width: 320px;
         padding: 110px 20px 20px 30px;
@@ -1873,7 +1874,7 @@ footer {
     .actions-slider {
         max-width: 340px;
         width: 100%;
-        margin: 30px auto 0;
+        margin: 30px auto 20px;
     }
 
     .action-img {
@@ -1920,6 +1921,7 @@ footer {
 
     .main-slide {
         min-height: 600px;
+        transform: scale(1.0);
     }
 
     .main-slide.onion .composition {
@@ -2102,6 +2104,7 @@ footer {
     }
 
     .videos-slider .slick-arrow,
+    .actions-slider .slick-arrow,
     .recipes-slider .slick-arrow {
         top: auto;
         bottom: -50px;
@@ -2110,16 +2113,19 @@ footer {
     }
 
     .videos-slider .slick-prev,
+    .actions-slider .slick-prev,
     .recipes-slider .slick-prev {
         left: 10px;
     }
 
     .videos-slider .slick-next,
+    .actions-slider .slick-next,
     .recipes-slider .slick-next {
         right: 10px;
     }
 
     .videos-slider .slick-dots,
+    .actions-slider .slick-dots,
     .recipes-slider .slick-dots {
         display: flex;
         align-items: center;
@@ -2132,6 +2138,7 @@ footer {
     }
 
     .videos-slider .slick-dots li,
+    .actions-slider .slick-dots li,
     .recipes-slider .slick-dots li {
         width: 12px;
         height: 12px;
@@ -2139,6 +2146,7 @@ footer {
     }
 
     .videos-slider .slick-dots li button,
+    .actions-slider .slick-dots li button,
     .recipes-slider .slick-dots li button {
         width: 12px;
         height: 12px;
@@ -2148,7 +2156,12 @@ footer {
         font-size: 0;
     }
 
+    .actions-slider .slick-dots li button {
+        background: #fff;
+    }
+
     .videos-slider .slick-dots li.slick-active button,
+    .actions-slider .slick-dots li.slick-active button,
     .recipes-slider .slick-dots li.slick-active button {
         opacity: 1;
     }
@@ -2158,5 +2171,52 @@ footer {
         height: 94px;
         background: url(../img/youtube-btn-mob.svg) center no-repeat;
         background-size: contain;
+    }
+
+    #onetrust-consent-sdk #onetrust-policy-text {
+        font-size: 10px !important;
+    }
+
+    .tooltip {
+        top: 30px;
+        width: 254px;
+        height: 166px;
+        padding: 37px 20px;
+    }
+
+    .close-tooltip {
+        top: 15px;
+        right: 10px;
+        font-size: 14px;
+    }
+
+    .tooltip-text {
+        font-size: 26px;
+        line-height: 28px
+    }
+
+    .arrow-anchor {
+        position: absolute;
+        top: 560px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 37px;
+        height: 31px;
+        background: url(../img/gif-bounce-arrow.png) center no-repeat;
+        background-size: contain;
+        z-index: 1;
+        animation: arrow-anchor 1.5s infinite ease-out;
+    }
+
+    @keyframes arrow-anchor {
+        0%,
+        100% {
+            top: 560px;
+        }
+
+        50% {
+            top: 570px;
+        }
     }
 }

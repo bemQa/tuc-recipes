@@ -126,7 +126,7 @@ $(document).ready(function () {
                 {
                     breakpoint: 1000,
                     settings: {
-                        arrows: false,
+                        dots: true,
                         variableWidth: true
                     }
                 }
