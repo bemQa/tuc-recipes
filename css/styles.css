@@ -927,7 +927,8 @@ header {
 
 .specification-tooltip {
     position: absolute;
-    bottom: -420px;
+    /*bottom: -420px;*/
+    bottom: -80px;
     left: 0;
     /*right: 0;*/
     margin: auto;
@@ -1806,7 +1807,8 @@ footer {
     }
 
     .specification-tooltip {
-        bottom: 40px;
+        /*bottom: 40px;*/
+        bottom: 230px;
         right: 0;
         width: 320px;
         padding: 110px 20px 20px 30px;
