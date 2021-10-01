@@ -219,7 +219,7 @@ $(document).ready(function () {
         $('.recipes-slider').slick({
             dots: false,
             arrows: true,
-            infinite: true,
+            infinite: false,
             slidesToShow: 3,
             slidesToScroll: 1,
             responsive: [
