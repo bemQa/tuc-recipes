@@ -702,8 +702,9 @@ header {
 .recipes-block {
     position: relative;
     min-height: 590px;
-    padding: 20px 0 60px;
-    background: #fff;
+    margin-top: -30px;
+    padding: 80px 0 60px;
+    background: #003087;
     overflow: hidden;
 }
 
@@ -717,7 +718,7 @@ header {
     width: 100%;
     height: 100%;
     margin: auto;
-    background: #fff;
+    background: #003087;
     z-index: 0;
 }
 
@@ -756,7 +757,7 @@ header {
     font-size: 16px;
     line-height: 93%;
     text-align: center;
-    color: #003087;
+    color: #fff;
 }
 
 .recipes-slider-text span {
@@ -771,7 +772,7 @@ header {
     bottom: 0;
     width: 34px;
     height: 34px;
-    background: url(../img/hover-icon.svg) center no-repeat;
+    background: url(../img/hover-icon-white.svg) center no-repeat;
     background-size: contain;
 }
 
@@ -801,8 +802,7 @@ header {
     background-size: contain;
 }
 
-.products-slider .slick-prev,
-.actions-slider .slick-prev {
+.white-slider .slick-prev {
     background: url(../img/arrow-left-white.svg) center no-repeat;
     background-size: contain;
 }
@@ -813,8 +813,7 @@ header {
     background-size: contain;
 }
 
-.products-slider .slick-next,
-.actions-slider .slick-next {
+.white-slider .slick-next {
     background: url(../img/arrow-right-white.svg) center no-repeat;
     background-size: contain;
 }
@@ -822,9 +821,8 @@ header {
 .products-block {
     position: relative;
     min-height: 456px;
-    padding: 35px 0 80px;
-    background: url(../img/blue1-bg.png) center no-repeat;
-    background-size: 100% 100%;
+    margin-top: -45px;
+    padding: 60px 0;
 }
 
 .products-block::before {
@@ -833,14 +831,11 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     width: 100%;
-    height: 110%;
+    height: 105%;
     margin: auto;
-    background: url(../img/grunge.png) center 0 no-repeat;
-    background-size: cover;
-    mix-blend-mode: soft-light;
-    opacity: 0.4;
+    background: url(../img/white-bg.png) center no-repeat;
+    background-size: 100% 100%;
     z-index: 0;
 }
 
@@ -885,7 +880,6 @@ header {
     line-height: 1;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #fff;
 }
 
 .product-weight {
@@ -894,7 +888,6 @@ header {
     line-height: 1;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -904,7 +897,7 @@ header {
     width: 269px;
     height: 57px;
     margin: auto;
-    background: url(../img/recipes-btn.svg) center no-repeat;
+    background: url(../img/recipes-btn1.svg) center no-repeat;
     background-size: contain;
 }
 
@@ -915,7 +908,7 @@ header {
     width: 164px;
     height: 38px;
     margin: 0 auto;
-    background: url(../img/specification-btn.png) center no-repeat;
+    background: url(../img/specification-btn-yellow.png) center no-repeat;
     background-size: contain;
     font-family: 'Peach Milk 2.0';
     font-size: 18px;
@@ -928,7 +921,7 @@ header {
 .specification-tooltip {
     position: absolute;
     /*bottom: -420px;*/
-    top: 400px;
+    top: 220px;
     left: 0;
     /*right: 0;*/
     margin: auto;
@@ -1004,7 +997,6 @@ header {
     display: flex;
     align-items: center;
     min-height: 112px;
-    margin-top: -30px;
     background: url(../img/white1-bg.png) center no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
@@ -1033,9 +1025,7 @@ header {
 
 .actions-block {
     position: relative;
-    padding: 50px 0 100px;
-    background: url(../img/blue1-bg.png) center no-repeat;
-    background-size: 100% 100%;
+    padding: 60px 0;
     overflow: hidden;
 }
 
@@ -1053,18 +1043,6 @@ header {
     background-size: cover;
     mix-blend-mode: soft-light;
     opacity: 0.4;
-    z-index: 0;
-}
-
-.actions-block::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 40px;
-    background: #fff;
     z-index: 0;
 }
 
@@ -1477,11 +1455,10 @@ footer {
 
 .videos-block {
     position: relative;
-    top: -20px;
     min-height: 700px;
-    padding: 60px 0 30px;
-    background: url(../img/tuc-bg.png) center 0 no-repeat;
-    background-size: 731px;
+    padding: 60px 0 100px;
+    background: url(../img/blue1-bg.png) center no-repeat;
+    background-size: 100% 100%;
 }
 
 .videos-block::before {
@@ -1499,6 +1476,26 @@ footer {
     mix-blend-mode: soft-light;
     opacity: 0.4;
     z-index: 0;
+}
+
+.videos-block::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 731px;
+    height: 100%;
+    margin: auto;
+    background: url(../img/tuc-bg-white.png) center 0 no-repeat;
+    background-size: 731px;
+    z-index: 0;
+}
+
+.videos-block .container {
+    position: relative;
+    z-index: 1;
 }
 
 .videos-slider {
@@ -1774,7 +1771,7 @@ footer {
 
     .recipes-block {
         min-height: 500px;
-        padding: 20px 0 50px;
+        padding: 50px 0;
     }
 
     .recipes-slider {
@@ -1804,6 +1801,16 @@ footer {
 
     .products-slider .slick-next {
         right: 0;
+    }
+
+    .products-block {
+        margin-top: -25px;
+        padding: 50px 0;
+    }
+
+    .products-block::before {
+        background: url(../img/white-bg-mob.png) center no-repeat;
+        background-size: 100% 100%;
     }
 
     .specification-tooltip {
@@ -1869,6 +1876,10 @@ footer {
         margin: 10px 15px;
     }
 
+    .actions-block {
+        padding: 50px 0 60px;
+    }
+
     .actions-block .container {
         padding-right: 0;
     }
@@ -1899,6 +1910,7 @@ footer {
 
     .footer-wrapper {
         flex-direction: column;
+        padding-top: 20px;
     }
 
     .copyright {
@@ -2075,10 +2087,15 @@ footer {
     }
 
     .videos-block {
-        top: -30px;
         min-height: 500px;
-        padding: 40px 0;
-        background-position: center 25px;
+        padding: 50px 0 80px;
+    }
+
+    .videos-block::after {
+        top: 25px;
+        left: -200px;
+        right: -200px;
+        width: 430px;
         background-size: 430px;
     }
 
@@ -2147,9 +2164,7 @@ footer {
         margin: 4px;
     }
 
-    .videos-slider .slick-dots li button,
-    .actions-slider .slick-dots li button,
-    .recipes-slider .slick-dots li button {
+    .slick-slider .slick-dots li button {
         width: 12px;
         height: 12px;
         border-radius: 10px;
@@ -2158,13 +2173,11 @@ footer {
         font-size: 0;
     }
 
-    .actions-slider .slick-dots li button {
+    .white-slider .slick-dots li button {
         background: #fff;
     }
 
-    .videos-slider .slick-dots li.slick-active button,
-    .actions-slider .slick-dots li.slick-active button,
-    .recipes-slider .slick-dots li.slick-active button {
+    .slick-slider .slick-dots li.slick-active button {
         opacity: 1;
     }
 
