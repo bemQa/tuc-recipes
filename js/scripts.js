@@ -208,6 +208,8 @@ $(document).ready(function () {
             let html = 'img/recipes/'+url+'.gif'
             $(this).next().attr('src', html);
 
+            dataLayer.push({'event': url});
+
             $('.recipe-static').mouseleave(function(e){
                 url, html = null;
                 $(this).next().attr('src', '');
@@ -238,6 +240,8 @@ $(document).ready(function () {
             let url = elem.data('recipe');
             let html = 'img/recipes/'+url+'.gif'
             elem.next().attr('src', html);
+            
+            dataLayer.push({'event': url});
 
             $('.recipes-slider').on('afterChange', function(event, slick, currentSlide){
                 let prev_slide = $(this).find('.slick-active').prev();
@@ -246,6 +250,8 @@ $(document).ready(function () {
                 let html = 'img/recipes/'+url+'.gif'
                 elem.next().attr('src', html);
                 prev_slide.find('.recipe-static').next().attr('src', '');
+
+                dataLayer.push({'event': url});
             });
         }
     }
