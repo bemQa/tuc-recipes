@@ -749,6 +749,11 @@ header {
     opacity: 0;
 }
 
+.recipe-gif {
+    width: 300px;
+    height: 300px;
+}
+
 .recipes-slider-text {
     position: relative;
     max-width: 540px;
@@ -2172,6 +2177,7 @@ footer {
     .actions-slider .slick-dots,
     .recipes-slider .slick-dots {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         position: absolute;
